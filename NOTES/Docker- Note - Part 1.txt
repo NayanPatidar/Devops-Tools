@@ -18,3 +18,30 @@ An easy and lightweight way to model reality: Docker is really fast. You can Doc
 in minutes. Docker relies on copy and write model so the changes you made only get changed.
 Docker containers take less than a second to launch. Because you don't have the overhead hypervisor 
 also means that you can pack more of them into oyur hosts.
+
+** Docker also encourages service-oriented and microservices architectures.
+
+Components 
+- The Docker client and server, also called the Docker Engine.
+- Docker Images
+- Registries
+- Docker containers
+
+Docker client and server
+Docker is a client-server application. The Docker client talks to the Docker server
+or daemon, which, in turn, does all the work. You’ll also sometimes see the Docker
+daemon called the Docker Engine.
+
+Images
+- Images are the building blocks of the Docker World. You launch your containers from images.
+- One can think images as the source code for your containers.
+- Images are build by a step - by - step process:
+* Add a file
+ * Open a port
+
+Registries
+Docker stores the images you build in registries. There are two type of registries: public and
+private. Docker, Inc., operates the public registry for images, called the Docker Hub. Docker hub 
+has images of almost thing one require. One can also store images you want to keep private on the 
+Docker Hub.
+
