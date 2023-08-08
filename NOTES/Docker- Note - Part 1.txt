@@ -1,0 +1,20 @@
+Chapter 1 
+
+-> hypervisor virtualization - One or More indepedent machines run on physical hardware via 
+                               intermediation layer.
+-> container virtualization - It runs on top of operating system's kernel. It allows multiple
+                               isolated user instaces to be run on a single host.
+
+Introducing Docker
+Docker is an open-source engine that automates the deployment of applications into containers.
+Docker adds an application deployment engine on top of a virtualized container execution 
+environment. It is designed to provide a lightweight and fast environment in which to run the 
+your code as well as an efficiemt workflow to get that code from your laptop to your test 
+environment and then into the production. Docker is incredibly simple. Indeed, you can get started with Docker
+on a minimal host running nothing but a compatible Linux kernel and a Docker
+binary.
+
+An easy and lightweight way to model reality: Docker is really fast. You can Dockerize your applications 
+in minutes. Docker relies on copy and write model so the changes you made only get changed.
+Docker containers take less than a second to launch. Because you don't have the overhead hypervisor 
+also means that you can pack more of them into oyur hosts.
