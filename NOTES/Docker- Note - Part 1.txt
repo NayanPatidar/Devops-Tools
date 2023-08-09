@@ -37,7 +37,7 @@ Images
 - One can think images as the source code for your containers.
 - Images are build by a step - by - step process:
 * Add a file
- * Open a port
+* Open a port
 
 Registries
 Docker stores the images you build in registries. There are two type of registries: public and
@@ -45,3 +45,24 @@ private. Docker, Inc., operates the public registry for images, called the Docke
 has images of almost thing one require. One can also store images you want to keep private on the 
 Docker Hub.
 
+Containers
+Docker helps you build and deploy containers inside of which you can package your applications
+and services.Containers are launchedfrom images and can contain one or more running processes.
+You can think about images as the building or packing aspect of Docker and the containers as the
+running or execution aspect of Docker. A Docker container is:
+• An image format.
+• A set of standard operations.
+• An execution environment.
+
+Compose, Swarm and Kubernetes
+We can also create Docker Containers in stacks and clusters, what Docker calls swarms. It has main
+two tools:
+
+• Docker Compose - It is a tool used to define and run multi-
+container applications. It allows you to describe an entire application 
+stack in a single YAML file, which includes information about the services, 
+networks, and volumes that make up your application. 
+
+• Docker Swarm - It is native orchestration and clostering solution for docker 
+containers. IT allows you to create a group of Docker nodes that work
+together for a cluster.
