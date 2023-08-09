@@ -1,0 +1,25 @@
+Getting Started with Docker
+
+Running our first container
+- $ sudo docker run -i -t ubuntu /bin/bash
+The -i cmd ensures that the standard input (stdin) remians open if not attached
+allowing it to interact with the container's shell.
+The -t allocates a pseudo-TTY to the container, wich allows you to enter 
+commands interactively. 
+
+- hostname
+To know the name of container enter -- "hostname"
+
+- hostname -I 
+To know the IP address of the container
+
+- sudo docker run --name myogcontainer -i -t ubuntu /bin/bash
+To give a specific name to the container run --name cmd
+
+- $ sudo docker run --name daemon_dave -d ubuntu /bin/sh -c "while true;
+do echo hello world; sleep 1; done"
+We used the docker run cmd with the -d flag to tell Docker to deatch the containr 
+to the background. We’ve also specified a while loop as our container command.
+Our loop will echo hello world over and over again until the container is stopped 
+or the process stops.
+
