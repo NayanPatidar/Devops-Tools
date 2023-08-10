@@ -23,3 +23,19 @@ to the background. We’ve also specified a while loop as our container command.
 Our loop will echo hello world over and over again until the container is stopped 
 or the process stops.
 
+- $ sudo docker run --log-driver="syslog" --name daemon_dwayne -d ubuntu /bin/sh -called
+"while true; do echo hello world; sleep 1; done"
+
+Running a process inside an already running container
+- $ sudo docker exec -d daemon_dave touch /etc/new_config_file
+
+- $ sudo docker exec -t -i daemon_dave /bin/bash
+
+** use sudo docker ps -a instead of just docker ps -a 
+
+-  sudo docker inspect --format='{{ .State.Running }}' FirstCont
+Used to see that status of the specific container
+
+
+
+
