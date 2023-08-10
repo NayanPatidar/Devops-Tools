@@ -50,7 +50,7 @@ layers added during the containers image build process. These layers contain
 application-specific files, configurations and other dependancies.
 
 4) The application files are part of this writable layer and can be modifies
-by the running application
+by the running application.
 
 
 
