@@ -52,6 +52,9 @@ application-specific files, configurations and other dependancies.
 4) The application files are part of this writable layer and can be modifies
 by the running application.
 
+- sudo docker rmi centos
+rmi is used to remove image which were pulled.
+
 
 
 
