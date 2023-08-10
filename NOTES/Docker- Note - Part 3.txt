@@ -1,0 +1,59 @@
+Working with Docker images and repositries
+
+What is Docker image?
+Docker image is made up of filesystems layered over each other. At the base is
+a boot filesystems, bootfs, which resembles the typical Linux/Unix boot 
+filesystems. 
+
+       Container View
+        +------------+
+        | Application|
+        |   Files    |
+        +------------+
+              |
+        +------------+
+        | Image Layer|
+        | (Read-Only)|
+        +------------+
+              |
+        +------------+
+        | Image Layer|
+        | (Read-Only)|
+        +------------+
+              |
+        +------------+
+        | Image Layer|
+        | (Read-Only)|
+        +------------+
+              |
+        +------------+
+        | Base Image |
+        | (Read-Only)|
+        +------------+
+              |
+        +------------+
+        | Host System|
+        | (Read-Only)|
+        +------------+
+
+
+1) The host system is th underlying physical or virtual machien where Docker
+is running. It contains system files, libraries, and resources shared
+by all containers.
+
+2) The "Base Image" is the initial read-only file containing the 
+core operating system. It acts as the foundation for the container's 
+filesystem.
+
+3) Every Image layer above the base image represent a additional read-only
+layers added during the containers image build process. These layers contain
+application-specific files, configurations and other dependancies.
+
+4) The application files are part of this writable layer and can be modifies
+by the running application
+
+
+
+
+
+
