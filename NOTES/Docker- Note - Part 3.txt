@@ -89,7 +89,15 @@ RUN echo 'Hi, I am in your container' >/var/www/html/index.html
 --> sudo docker build -t="repository.name" .
 This will build the image
 
+--> ENTRYPOINT ["/usr/sbin/nginx"]
+This sets the default cmd that will be executed when the containers 
+start.
 
+--> CMD ["-h]
+This instruction is passed to the command.
+
+--> WORKDIR /path/to/directory
+It is used to specify the absolute or relative path to the directory
 
 
 
