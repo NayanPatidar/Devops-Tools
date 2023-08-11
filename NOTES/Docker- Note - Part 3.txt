@@ -55,6 +55,39 @@ by the running application.
 - sudo docker rmi centos
 rmi is used to remove image which were pulled.
 
+Creating a Dockerfile
+make a folder named as static_web
+inside that folder create a Dockerfile
+
+Keep the contents of that docker file as 
+# Version: 0.0.1
+FROM ubuntu:18.04
+LABEL maintainer="james@example.com"
+RUN apt-get update; apt-get install -y nginx
+RUN echo 'Hi, I am in your container' \
+>/var/www/html/index.html
+EXPOSE 80
+
+# Version: 0.0.1
+FROM ubuntu:18.04
+--> This sets the base image for your Docker Image as Ubuntu 18.04
+
+LABEL maintainer="james@example.com"
+--> This adds a label to the image, specifying the maintainer's 
+contact information.
+
+RUN apt-get update; apt-get install -y nginx
+--> This RUN instruction updates the package repository using
+ apt-get update and then installs the NGINX web server using apt-get 
+ install -y nginx.
+
+RUN echo 'Hi, I am in your container' >/var/www/html/index.html
+--> This RUN instruction creates a simple HTML file with the content
+ "Hi, I am in your container" and writes it to the file /var/www/html/index.html
+  within the container. This file will be served by NGINX later.
+
+--> sudo docker build -t="repository.name" .
+This will build the image
 
 
 
