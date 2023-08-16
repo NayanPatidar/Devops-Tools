@@ -17,7 +17,7 @@ binary.
 An easy and lightweight way to model reality: Docker is really fast. You can Dockerize your applications 
 in minutes. Docker relies on copy and write model so the changes you made only get changed.
 Docker containers take less than a second to launch. Because you don't have the overhead hypervisor 
-also means that you can pack more of them into oyur hosts.
+also means that you can pack more of them into your hosts.
 
 ** Docker also encourages service-oriented and microservices architectures.
 
@@ -46,8 +46,13 @@ has images of almost thing one require. One can also store images you want to ke
 Docker Hub.
 
 Containers
-Docker helps you build and deploy containers inside of which you can package your applications
-and services.Containers are launchedfrom images and can contain one or more running processes.
+Containers are a lightweight and portable solution for packaging, distributing, and running  
+applications and their dependencies. It wraps the application along with its binaries, configuration
+files, and libraries into a single unit. This unit can be easily moved between different computing 
+environments, providing consistent behavior regardless of where it has been running.
+
+Docker helps you build and deploy containers inside which you can package your applications
+and services.Containers are launched from images and can contain one or more running processes.
 You can think about images as the building or packing aspect of Docker and the containers as the
 running or execution aspect of Docker. A Docker container is:
 • An image format.
