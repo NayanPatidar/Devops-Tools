@@ -1,0 +1,24 @@
+sudo docker ps -a                      
+CONTAINER ID   IMAGE                                  COMMAND                  CREATED        STATUS                      PORTS                                   NAMES
+79c44ce36794   ubuntu                                 "/bin/bash"              25 hours ago   Exited (137) 25 hours ago                                           admiring_feynman
+af7f09b61bca   ubuntu                                 "/bin/bash"              25 hours ago   Exited (127) 25 hours ago                                           crazy_kapitsa
+46a0c956b139   nayanpatidar/firstcontainerinchennai   "nginx -g 'daemon of…"   28 hours ago   Up 28 hours                 0.0.0.0:8080->80/tcp, :::8080->80/tcp   intro_8080
+a5fe436d2690   nayanpatidar/firstcontainerinchennai   "nginx -g 'daemon of…"   28 hours ago   Exited (0) 4 minutes ago                                            intro
+8fb576f7dae3   075e8aebc996                           "/usr/sbin/nginx /bi…"   6 days ago     Exited (1) 6 days ago                                               flamboyant_turing
+ccf9c36a17de   075e8aebc996                           "/usr/sbin/nginx ."      6 days ago     Exited (1) 6 days ago                                               cranky_grothendieck
+e26e94083166   b910f3c47eb2                           "/bin/bash"              6 days ago     Exited (127) 6 days ago                                             determined_carver
+23e63952bd9b   385872dfbd48                           "nginx -g 'daemon of…"   6 days ago     Exited (0) 5 days ago                                               static_web
+4f68df7cfa4e   40da2bd571d0                           "/bin/bash"              6 days ago     Exited (0) 6 days ago                                               wizardly_sutherland
+370543e9bb2e   5a81c4b8502e                           "/bin/bash"              6 days ago     Exited (130) 6 days ago                                             upbeat_payne
+
+
+
+To delete all these containers first stop them
+sudo docker stop 46a0c956b139 a5fe436d2690 8fb576f7dae3 ccf9c36a17de e26e94083166 23e63952bd9b 4f68df7cfa4e 370543e9bb2e
+
+Then to remove the containers use
+sudo docker rm 46a0c956b139 a5fe436d2690 8fb576f7dae3 ccf9c36a17de e26e94083166 23e63952bd9b 4f68df7cfa4e 370543e9bb2e
+
+To delete the images use 
+sudo docker rmi nayanpatidar/firstcontainerinchennai:latest 075e8aebc996:latest 385872dfbd48:latest 40da2bd571d0:latest 5a81c4b8502e:latest b910f3c47eb2:latest 75e8aebc996:latest 385872dfbd48:latest 40da2bd571d0:latest 5a81c4b8502e:latest
+
